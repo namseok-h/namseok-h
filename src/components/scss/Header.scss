@@ -1,0 +1,116 @@
+.Header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Noto Sans', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 12px 0;
+    height: 108px;
+
+    .LogoWrapper {
+        margin-right: 10px;
+        cursor: pointer;
+      
+        .LogoImg {
+          height: 120px;
+          width: auto;
+        }
+      }
+  
+    .Content {
+      display: flex; 
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+  
+      // 홈 아이콘
+      .IconStyle {
+        color: #00aaff;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      
+      // 검색창
+      .headerSearch {
+        flex: 1;
+        margin: 0 40px;
+  
+        .search {
+          display: flex;
+          align-items: center;
+          // background-color: #f2f6fa;
+          border: 2px solid #00aaff;
+          border-radius: 25px;
+          padding: 6px 12px;
+  
+          .searchInput {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+  
+            label {
+              display: none;
+            }
+  
+            input {
+              width: 100%;
+              padding: 8px 12px;
+              border: none;
+              background: transparent;
+              font-size: 15px;
+              outline: none;
+            }
+          }
+  
+          .searchSubmit {
+            background-color: #00aaff;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+  
+            &:hover {
+              background-color: #0092d3;
+            }
+          }
+        }
+      }
+  
+      // 로그인/회원가입 메뉴
+      .Menu {
+        display: flex;
+        gap: 15px;
+  
+        .Item {
+          font-size: 15px;
+          text-align: right;
+          
+  
+          a, span {
+            color: #222222;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+  
+            &:hover {
+              color: #00aaff;
+            }
+          }
+        }
+      }
+    }
+  }
+  

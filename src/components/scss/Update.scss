@@ -1,0 +1,78 @@
+.Update {
+  flex: 1;
+  min-height: 250px;
+  width: 800px;
+  margin: 10px auto;
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background: white;
+    margin: 1.5rem auto;
+    border-radius: 5px;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+
+    .Box {
+      width: 80%;
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      .FileTitle {
+        box-sizing: border-box;
+        text-align: center;
+        background: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        height: 5rem;
+        font-size: 1.25rem;
+        line-height: 3.5;
+        width: 20%;
+      }
+      .FileData {
+        box-sizing: border-box;
+        text-align: center;
+        background: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        height: 5rem;
+        font-size: 1.25rem;
+        line-height: 3.5;
+        flex: 1;
+        margin-left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+      }
+      .Down {
+        width: fit-content;
+        img {
+          vertical-align: middle;
+          margin-right: 0.5rem;
+          height: 50px;
+        }
+      }
+      .Down:hover {
+        cursor: pointer;
+        color: blue;
+      }
+    }
+  }
+
+  .Buttons {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    div + & {
+      margin-top: 2rem;
+    }
+
+    input + & {
+      margin-top: 2rem;
+    }
+  }
+}
