@@ -1,0 +1,224 @@
+.CategoryNav {
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Noto Sans', sans-serif;
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #007bff;
+      padding: 12px 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      position: relative;
+      margin-right: auto;
+
+      li {
+        list-style: none;
+        position: relative;
+
+        a {
+          text-decoration: none;
+          color: #222222;
+          font-weight: 500;
+          padding: 12px 0;
+          display: inline-block;
+          transition: color 0.2s;
+
+          &:hover {
+            color: #00aaff;
+          }
+        }
+
+        /* 전체메뉴 드롭다운 */
+        .mega-dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 700px;
+          background: #fff;
+          border: 1px solid #ddd;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          gap: 20px;
+          z-index: 20;
+          justify-content: space-between;
+          flex-direction: row;
+        }
+
+        .dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          width: 220px;
+          z-index: 10;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px 0;
+          flex-direction: column;
+        }
+
+        &:hover .mega-dropdown {
+          display: flex;
+        }
+
+        &:hover .dropdown {
+          display: flex;
+        }
+
+        &:not(:hover) .dropdown,
+        &:not(:hover) .mega-dropdown {
+          display: none;
+        }
+
+        .dropdown li {
+          padding: 8px 15px;
+          margin-bottom: 4px;
+        }
+
+        .dropdown a {
+          color: #222222;
+          font-weight: normal;
+          font-size: 14px;
+          padding: 6px 12px;
+          display: block;
+          text-decoration: none;
+
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+
+        .mega-dropdown .dropdown-column {
+          min-width: 200px;
+          padding: 0 10px;
+        }
+
+        .mega-dropdown .dropdown-column h4 {
+          font-size: 16px;
+          font-weight: bold;
+          color: #007acc;
+          margin-bottom: 10px;
+        }
+
+        .mega-dropdown .dropdown-column ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .mega-dropdown .dropdown-column li {
+          margin-bottom: 10px;
+        }
+
+        .mega-dropdown .dropdown-column a {
+          font-size: 14px;
+          color: #222222;
+          text-decoration: none;
+          padding: 8px 12px;
+          display: block;
+          transition: color 0.2s, background-color 0.2s;
+
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+
+    .menu-buttons {
+      display: flex;
+      gap: 15px;
+      margin-left: auto;
+
+      .btn {
+        padding: 10px 20px;
+        background-color: #929496;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgb(97, 97, 97);
+        }
+      }
+    }
+  }
+
+  &.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+
+    li {
+      padding: 10px 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-container {
+      flex-wrap: wrap;
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .dropdown {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .menu-buttons {
+        margin-left: 0;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+      }
+    }
+  }
+}
