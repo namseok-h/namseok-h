@@ -24,7 +24,7 @@ React + Spring Boot + MySQL 기반으로 개발한 **구인·구직 아르바이
 - Java (JDK 17)
 - Spring Boot, Spring MVC
 - MyBatis
-- Apache Tomcat 9.0
+
 
 ### 데이터베이스
 - MySQL
